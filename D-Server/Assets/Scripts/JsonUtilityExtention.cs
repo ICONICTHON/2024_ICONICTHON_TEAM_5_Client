@@ -32,13 +32,15 @@ public static class JsonUtilityExtention
 
     public static string ToJson<T>(List<T> datas)
     {
+        Debug.Log("LOG2");
         JsonWrapper<T> wrapper = new JsonWrapper<T>();
         wrapper.datas = datas;
         string json = JsonUtility.ToJson(wrapper);
-        json = PrettyPrintJson(json);
-        
+        //json = PrettyPrintJson(json);
+        Debug.Log(json);
 
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
+        Debug.Log("LOG4");
 
         return json;
     }

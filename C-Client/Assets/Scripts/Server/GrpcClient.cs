@@ -6,7 +6,8 @@ using IconicThon.Network;
 
 public class GrpcClient : MonoBehaviour
 {
-    const string ip = "59.6.87.115" + ":";
+    //const string ip = "59.6.87.115" + ":";
+    const string ip = "localhost" + ":";
     const int port = 7777;
 
     static Channel channel;
@@ -31,7 +32,7 @@ public class GrpcClient : MonoBehaviour
         }
     }
 
-    public static List<JsonFileDataFrame> GetLectureDataJson()
+    public List<JsonFileDataFrame> GetLectureDataJson()
     {
         if (client == null)
         {
@@ -39,7 +40,7 @@ public class GrpcClient : MonoBehaviour
             return new List<JsonFileDataFrame>();
         }
 
-        JsonResponse jsonData = client.RequestLectureList(new JsonRequest { Json = ""});
+        JsonResponse jsonData = client.RequestLectureList(new JsonRequest { Json = "123"});
 
         Debug.Log("callback key = " + jsonData.Json);
 

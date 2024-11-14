@@ -8,16 +8,6 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-public class JsonFileDataFrame
-{
-    public int _lectureBuilding;
-    public int _lectureNumber;
-    public int _lectureStudent;
-    public int _lectureCapacity;
-
-    public override string ToString() => $"_lectureNumber: {_lectureNumber}, _lectureStudent: {_lectureStudent}, _lectureCapacity: {_lectureCapacity}";
-}
-
 public class GRPCServer : MonoBehaviour
 {
     Server server;
@@ -25,7 +15,7 @@ public class GRPCServer : MonoBehaviour
     const string ip = "localhost";
     const int port = 7777;
 
-    private void Start()
+    private void Awake()
     {
         server = new Server
         {
@@ -53,8 +43,9 @@ public class AttendanceGRPC : Attendance.AttendanceBase
 
     public override Task<JsonResponse> RequestLectureList(JsonRequest lectureInfo, ServerCallContext context)
     {
-        string json = JsonUtilityExtention.ToJson(new List<JsonFileDataFrame>());
-        // Debug.Log("created key = " + privateKey);
+        Debug.Log("LOG1");
+        string json = JsonUtilityExtention.ToJson(DataSet.GetData());
+        Debug.Log("created key = " + json);
 
 
         return Task.FromResult(new JsonResponse { Json = json });

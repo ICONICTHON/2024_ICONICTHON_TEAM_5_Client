@@ -5,6 +5,8 @@ using LectureDefinition;
 
 public class MainControler : MonoBehaviour
 {
+    [SerializeField] JsonSendToLoad JsonSend;
+
     // 강의실 정보 UI
     public GameObject LectureRoomPrefab;
     public GameObject LectureRoomInfoPanel;
@@ -83,12 +85,12 @@ public class MainControler : MonoBehaviour
     {
         BaseLectureInfo baseLectureInfo = new BaseLectureInfo(this);
 
-        baseLectureInfo.LectureNumber = jsonData._lectureNumber;
-        baseLectureInfo.LectureCapacity = jsonData._lectureNumber;
-        baseLectureInfo.LectureStudent = jsonData._lectureNumber;
+        baseLectureInfo.LectureNumber = jsonData.LectureNumber;
+        baseLectureInfo.LectureCapacity = jsonData.LectureNumber;
+        baseLectureInfo.LectureStudent = jsonData.LectureNumber;
         baseLectureInfo.LectureFloor = baseLectureInfo.LectureNumber / 1000; // 층 구별
 
-        EBuildingField dataBuildingField = (EBuildingField)jsonData._lectureBuilding;
+        EBuildingField dataBuildingField = (EBuildingField)jsonData.LectureBuilding;
         LectureDic[dataBuildingField].Add(baseLectureInfo.DeepCopy());
     }
 
@@ -99,7 +101,7 @@ public class MainControler : MonoBehaviour
         SetUpLectureDic();
 
         // 새로운 데이터 셋 받아오기
-        _JsonData = JsonSendToLoad.LectureDataLoad();
+        _JsonData = JsonSend.LectureDataLoad();
         foreach (JsonFileDataFrame jsonData in _JsonData)
         {
             ConvertToEditor(jsonData); 
