@@ -115,7 +115,7 @@
 -define:ROSLYN_ANALYZER_FIX
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
--r:"D:/GitDesktop/2024_ICONICTHON_TEAM_5_Client/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
+-r:"D:/GitDesktop/2024_ICONICTHON_TEAM_5_Client/C-Client/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
 -r:"D:/UnityEngine/2021.3.19f1-x86_64/Editor/Data/Managed/UnityEditor.Graphs.dll"
 -r:"D:/UnityEngine/2021.3.19f1-x86_64/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
 -r:"D:/UnityEngine/2021.3.19f1-x86_64/Editor/Data/Managed/UnityEngine/UnityEditor.DeviceSimulatorModule.dll"
