@@ -14,37 +14,6 @@ public static class JsonUtilityExtention
     }
 
     /// <summary>
-    /// 단일 저장
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="data"></param>
-    /// <param name="path"></param>
-    public static void FileSave<T>(T data, string path)
-    {
-        JsonWrapper<T> wrapper = new JsonWrapper<T>();
-        wrapper.datas = new List<T> { data };
-        string json = JsonUtility.ToJson(wrapper);
-        json = PrettyPrintJson(json);
-        if (!path.StartsWith('/')) path = "/" + path;
-        File.WriteAllText(Application.dataPath + path, json);
-        AssetDatabase.Refresh();
-    }
-
-    /// <summary>
-    /// 단일 불러오기
-    /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <param name="path"></param>
-    /// <returns></returns>
-    public static T FileLoad<T>(string path)
-    {
-        if (!path.StartsWith('/')) path = "/" + path;
-        string json = File.ReadAllText(Application.dataPath + path);
-        JsonWrapper<T> wrapper = JsonUtility.FromJson<JsonWrapper<T>>(json);
-        return wrapper.datas[0];
-    }
-
-    /// <summary>
     /// 리스트 타입 저장
     /// </summary>
     /// <typeparam name="T">클래스 타입</typeparam>
@@ -61,16 +30,27 @@ public static class JsonUtilityExtention
         AssetDatabase.Refresh();
     }
 
+    public static string ToJson<T>(List<T> datas)
+    {
+        JsonWrapper<T> wrapper = new JsonWrapper<T>();
+        wrapper.datas = datas;
+        string json = JsonUtility.ToJson(wrapper);
+        json = PrettyPrintJson(json);
+        
+
+        AssetDatabase.Refresh();
+
+        return json;
+    }
+
     /// <summary>
     /// 리스트 타입 불러오기
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>
-    public static List<T> FileLoadList<T>(string path)
+    public static List<T> FromJson<T>(string json)
     {
-        if (!path.StartsWith('/')) path = "/" + path;
-        string json = File.ReadAllText(Application.dataPath + path);
         JsonWrapper<T> wrapper = JsonUtility.FromJson<JsonWrapper<T>>(json);
         return wrapper.datas;
     }

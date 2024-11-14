@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Net;
 using System.IO;
 
 [System.Serializable]
@@ -30,7 +31,7 @@ public class JsonSendToLoad : MonoBehaviour
     [ContextMenu("From Json Data")] // 컴포넌트 메뉴에 아래 함수를 호출하는 To Json Data 라는 명령어가 생성됨
     public static List<JsonFileDataFrame> LectureDataLoad()
     {
-        List<JsonFileDataFrame> datas = JsonUtilityExtention.FileLoadList<JsonFileDataFrame>(LIST_JSON_PATH);
+        List<JsonFileDataFrame> datas = GrpcClient.GetLectureDataJson();
         string s = "Data List: \n";
         foreach (var data in datas)
         {
