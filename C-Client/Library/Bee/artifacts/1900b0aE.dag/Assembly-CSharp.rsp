@@ -382,7 +382,6 @@
 "Assets/Scripts/Server/Grpc5Team.cs"
 "Assets/Scripts/Server/Grpc5teamGrpc.cs"
 "Assets/Scripts/Server/GrpcClient.cs"
-"Assets/Scripts/Server/GRPCServer.cs"
 -langversion:9.0
 
 /deterministic

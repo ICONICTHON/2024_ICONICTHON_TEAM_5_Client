@@ -96,7 +96,7 @@ public class BaseLectureInfo
         set
         {
             _lectureAirConditionerImage = value;
-            if (IsLectureAir)
+            if (CanLectureControl && Random.Range(0,2) == 1)
             {
                 _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[1];
             }
@@ -117,12 +117,15 @@ public class BaseLectureInfo
         set
         {
             _lectureControlImage = value;
-            if (CanLectureControl)
+            
+            if ((float)LectureStudent / (float)LectureCapacity > 0.5f)
             {
+                CanLectureControl = false;
                 _lectureControlImage.sprite = _lectureControlImages[1];
             }
             else
             {
+                CanLectureControl = true;
                 _lectureControlImage.sprite = _lectureControlImages[0];
             }
         }
@@ -170,7 +173,7 @@ public class BaseLectureInfo
     {
         get
         {
-            return _lectureStudent;
+            return _lectureCapacity;
         }
 
         set
@@ -214,8 +217,7 @@ public class BaseLectureInfo
 
         set
         {
-            if (LectureStudent / LectureCapacity > 0.5f) _canLectureControl = true;
-            else _canLectureControl = false;
+            _canLectureControl = value;
         }
     }
 
@@ -259,11 +261,11 @@ public class BaseLectureInfo
         _lectureControlImages = images1;
         _lectureAirConditionerImages = images2;
         LectureNumberText = infoObjects[0].GetComponent<TMP_Text>();
+        LectureControlImage = infoObjects[5].GetComponent<Image>();
         LectureAirConditionerImage = infoObjects[1].GetComponent<Image>();
         LectureStudentText = infoObjects[2].GetComponent<TMP_Text>();
         LectureHumeText = infoObjects[3].GetComponent<TMP_Text>();
         LectureTempText = infoObjects[4].GetComponent<TMP_Text>();
-        LectureControlImage = infoObjects[5].GetComponent<Image>();
     }
 
     public BaseLectureInfo DeepCopy()

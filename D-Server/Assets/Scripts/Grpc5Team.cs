@@ -27,27 +27,36 @@ namespace IconicThon.Network {
             "Cg9ncnBjNXRlYW0ucHJvdG8SEkljb25pY1Rob24uTmV0d29yayI4CgtMZWN0",
             "dXJlSW5mbxITCgtsZWN0dXJlQ29kZRgBIAEoCRIUCgxhdHRlbmRTdGF0dXMY",
             "AiABKAkiGQoJRW1wdHlJbmZvEgwKBFRlbXAYASABKAkiGwoLSnNvblJlcXVl",
-            "c3QSDAoEanNvbhgBIAEoCSI3ChVSZXF1ZXN0QXR0ZW5kYW5jZUluZm8SCgoC",
-            "aWQYASABKAkSEgoKcHJpdmF0ZUtleRgCIAEoCSIZCgpQcml2YXRlS2V5EgsK",
-            "A2tleRgBIAEoCSIcCgxKc29uUmVzcG9uc2USDAoEanNvbhgBIAEoCSIyChZS",
-            "ZXNwb25zZUF0dGVuZGFuY2VJbmZvEhgKEGF0dGVuZGFuY2VTdGF0dXMYASAB",
-            "KAkyrgIKCkF0dGVuZGFuY2USVgoRUmVmcmVzaFByaXZhdGVLZXkSHy5JY29u",
-            "aWNUaG9uLk5ldHdvcmsuTGVjdHVyZUluZm8aHi5JY29uaWNUaG9uLk5ldHdv",
-            "cmsuUHJpdmF0ZUtleSIAElkKElJlcXVlc3RMZWN0dXJlTGlzdBIfLkljb25p",
-            "Y1Rob24uTmV0d29yay5Kc29uUmVxdWVzdBogLkljb25pY1Rob24uTmV0d29y",
-            "ay5Kc29uUmVzcG9uc2UiABJtChJTZW5kQXR0ZW5kYW5jZUluZm8SKS5JY29u",
-            "aWNUaG9uLk5ldHdvcmsuUmVxdWVzdEF0dGVuZGFuY2VJbmZvGiouSWNvbmlj",
-            "VGhvbi5OZXR3b3JrLlJlc3BvbnNlQXR0ZW5kYW5jZUluZm8iAGIGcHJvdG8z"));
+            "c3QSDAoEanNvbhgBIAEoCSJMChVSZXF1ZXN0QXR0ZW5kYW5jZUluZm8SCgoC",
+            "aWQYASABKAkSEgoKcHJpdmF0ZUtleRgCIAEoCRITCgtsZWN0dXJlQ29kZRgD",
+            "IAEoCSIuCgtTdHVkZW50SW5mbxIKCgJpZBgBIAEoCRITCgtsZWN0dXJlQ29k",
+            "ZRgCIAEoCSIZCgpQcml2YXRlS2V5EgsKA2tleRgBIAEoCSIcCgxKc29uUmVz",
+            "cG9uc2USDAoEanNvbhgBIAEoCSJHChZSZXNwb25zZUF0dGVuZGFuY2VJbmZv",
+            "EhgKEGF0dGVuZGFuY2VTdGF0dXMYASABKAkSEwoLbGVjdHVyZU5hbWUYAiAB",
+            "KAkiUgoVU3R1ZGVudEF0dGVuZGFuY2VJbmZvEgoKAmlkGAEgASgJEhgKEGF0",
+            "dGVuZGFuY2VTdGF0dXMYAiABKAkSEwoLbGVjdHVyZU5hbWUYAyABKAkykgMK",
+            "CkF0dGVuZGFuY2USVgoRUmVmcmVzaFByaXZhdGVLZXkSHy5JY29uaWNUaG9u",
+            "Lk5ldHdvcmsuTGVjdHVyZUluZm8aHi5JY29uaWNUaG9uLk5ldHdvcmsuUHJp",
+            "dmF0ZUtleSIAElkKElJlcXVlc3RMZWN0dXJlTGlzdBIfLkljb25pY1Rob24u",
+            "TmV0d29yay5Kc29uUmVxdWVzdBogLkljb25pY1Rob24uTmV0d29yay5Kc29u",
+            "UmVzcG9uc2UiABJtChJTZW5kQXR0ZW5kYW5jZUluZm8SKS5JY29uaWNUaG9u",
+            "Lk5ldHdvcmsuUmVxdWVzdEF0dGVuZGFuY2VJbmZvGiouSWNvbmljVGhvbi5O",
+            "ZXR3b3JrLlJlc3BvbnNlQXR0ZW5kYW5jZUluZm8iABJiChJSZXF1ZXN0TGVj",
+            "dHVyZUluZm8SHy5JY29uaWNUaG9uLk5ldHdvcmsuU3R1ZGVudEluZm8aKS5J",
+            "Y29uaWNUaG9uLk5ldHdvcmsuU3R1ZGVudEF0dGVuZGFuY2VJbmZvIgBiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.LectureInfo), global::IconicThon.Network.LectureInfo.Parser, new[]{ "LectureCode", "AttendStatus" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.EmptyInfo), global::IconicThon.Network.EmptyInfo.Parser, new[]{ "Temp" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.JsonRequest), global::IconicThon.Network.JsonRequest.Parser, new[]{ "Json" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.RequestAttendanceInfo), global::IconicThon.Network.RequestAttendanceInfo.Parser, new[]{ "Id", "PrivateKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.RequestAttendanceInfo), global::IconicThon.Network.RequestAttendanceInfo.Parser, new[]{ "Id", "PrivateKey", "LectureCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.StudentInfo), global::IconicThon.Network.StudentInfo.Parser, new[]{ "Id", "LectureCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.PrivateKey), global::IconicThon.Network.PrivateKey.Parser, new[]{ "Key" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.JsonResponse), global::IconicThon.Network.JsonResponse.Parser, new[]{ "Json" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.ResponseAttendanceInfo), global::IconicThon.Network.ResponseAttendanceInfo.Parser, new[]{ "AttendanceStatus" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.ResponseAttendanceInfo), global::IconicThon.Network.ResponseAttendanceInfo.Parser, new[]{ "AttendanceStatus", "LectureName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::IconicThon.Network.StudentAttendanceInfo), global::IconicThon.Network.StudentAttendanceInfo.Parser, new[]{ "Id", "AttendanceStatus", "LectureName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -694,6 +703,7 @@ namespace IconicThon.Network {
     public RequestAttendanceInfo(RequestAttendanceInfo other) : this() {
       id_ = other.id_;
       privateKey_ = other.privateKey_;
+      lectureCode_ = other.lectureCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -727,6 +737,18 @@ namespace IconicThon.Network {
       }
     }
 
+    /// <summary>Field number for the "lectureCode" field.</summary>
+    public const int LectureCodeFieldNumber = 3;
+    private string lectureCode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LectureCode {
+      get { return lectureCode_; }
+      set {
+        lectureCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -744,6 +766,7 @@ namespace IconicThon.Network {
       }
       if (Id != other.Id) return false;
       if (PrivateKey != other.PrivateKey) return false;
+      if (LectureCode != other.LectureCode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -753,6 +776,7 @@ namespace IconicThon.Network {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (PrivateKey.Length != 0) hash ^= PrivateKey.GetHashCode();
+      if (LectureCode.Length != 0) hash ^= LectureCode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -779,6 +803,10 @@ namespace IconicThon.Network {
         output.WriteRawTag(18);
         output.WriteString(PrivateKey);
       }
+      if (LectureCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LectureCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -797,6 +825,10 @@ namespace IconicThon.Network {
         output.WriteRawTag(18);
         output.WriteString(PrivateKey);
       }
+      if (LectureCode.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LectureCode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -812,6 +844,9 @@ namespace IconicThon.Network {
       }
       if (PrivateKey.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PrivateKey);
+      }
+      if (LectureCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LectureCode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -830,6 +865,9 @@ namespace IconicThon.Network {
       }
       if (other.PrivateKey.Length != 0) {
         PrivateKey = other.PrivateKey;
+      }
+      if (other.LectureCode.Length != 0) {
+        LectureCode = other.LectureCode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -852,6 +890,10 @@ namespace IconicThon.Network {
           }
           case 18: {
             PrivateKey = input.ReadString();
+            break;
+          }
+          case 26: {
+            LectureCode = input.ReadString();
             break;
           }
         }
@@ -877,6 +919,236 @@ namespace IconicThon.Network {
             PrivateKey = input.ReadString();
             break;
           }
+          case 26: {
+            LectureCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class StudentInfo : pb::IMessage<StudentInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StudentInfo> _parser = new pb::MessageParser<StudentInfo>(() => new StudentInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StudentInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudentInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudentInfo(StudentInfo other) : this() {
+      id_ = other.id_;
+      lectureCode_ = other.lectureCode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudentInfo Clone() {
+      return new StudentInfo(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "lectureCode" field.</summary>
+    public const int LectureCodeFieldNumber = 2;
+    private string lectureCode_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LectureCode {
+      get { return lectureCode_; }
+      set {
+        lectureCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StudentInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StudentInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (LectureCode != other.LectureCode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (LectureCode.Length != 0) hash ^= LectureCode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (LectureCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LectureCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (LectureCode.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LectureCode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (LectureCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LectureCode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StudentInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.LectureCode.Length != 0) {
+        LectureCode = other.LectureCode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            LectureCode = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            LectureCode = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -898,7 +1170,7 @@ namespace IconicThon.Network {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[4]; }
+      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1087,7 +1359,7 @@ namespace IconicThon.Network {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[5]; }
+      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1276,7 +1548,7 @@ namespace IconicThon.Network {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[6]; }
+      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1297,6 +1569,7 @@ namespace IconicThon.Network {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseAttendanceInfo(ResponseAttendanceInfo other) : this() {
       attendanceStatus_ = other.attendanceStatus_;
+      lectureName_ = other.lectureName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1318,6 +1591,18 @@ namespace IconicThon.Network {
       }
     }
 
+    /// <summary>Field number for the "lectureName" field.</summary>
+    public const int LectureNameFieldNumber = 2;
+    private string lectureName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LectureName {
+      get { return lectureName_; }
+      set {
+        lectureName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1334,6 +1619,7 @@ namespace IconicThon.Network {
         return true;
       }
       if (AttendanceStatus != other.AttendanceStatus) return false;
+      if (LectureName != other.LectureName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1342,6 +1628,7 @@ namespace IconicThon.Network {
     public override int GetHashCode() {
       int hash = 1;
       if (AttendanceStatus.Length != 0) hash ^= AttendanceStatus.GetHashCode();
+      if (LectureName.Length != 0) hash ^= LectureName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1364,6 +1651,10 @@ namespace IconicThon.Network {
         output.WriteRawTag(10);
         output.WriteString(AttendanceStatus);
       }
+      if (LectureName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LectureName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1378,6 +1669,10 @@ namespace IconicThon.Network {
         output.WriteRawTag(10);
         output.WriteString(AttendanceStatus);
       }
+      if (LectureName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(LectureName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1390,6 +1685,9 @@ namespace IconicThon.Network {
       int size = 0;
       if (AttendanceStatus.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AttendanceStatus);
+      }
+      if (LectureName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LectureName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1405,6 +1703,9 @@ namespace IconicThon.Network {
       }
       if (other.AttendanceStatus.Length != 0) {
         AttendanceStatus = other.AttendanceStatus;
+      }
+      if (other.LectureName.Length != 0) {
+        LectureName = other.LectureName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1425,6 +1726,10 @@ namespace IconicThon.Network {
             AttendanceStatus = input.ReadString();
             break;
           }
+          case 18: {
+            LectureName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1442,6 +1747,273 @@ namespace IconicThon.Network {
             break;
           case 10: {
             AttendanceStatus = input.ReadString();
+            break;
+          }
+          case 18: {
+            LectureName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class StudentAttendanceInfo : pb::IMessage<StudentAttendanceInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StudentAttendanceInfo> _parser = new pb::MessageParser<StudentAttendanceInfo>(() => new StudentAttendanceInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StudentAttendanceInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::IconicThon.Network.Grpc5TeamReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudentAttendanceInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudentAttendanceInfo(StudentAttendanceInfo other) : this() {
+      id_ = other.id_;
+      attendanceStatus_ = other.attendanceStatus_;
+      lectureName_ = other.lectureName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StudentAttendanceInfo Clone() {
+      return new StudentAttendanceInfo(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "attendanceStatus" field.</summary>
+    public const int AttendanceStatusFieldNumber = 2;
+    private string attendanceStatus_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AttendanceStatus {
+      get { return attendanceStatus_; }
+      set {
+        attendanceStatus_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "lectureName" field.</summary>
+    public const int LectureNameFieldNumber = 3;
+    private string lectureName_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LectureName {
+      get { return lectureName_; }
+      set {
+        lectureName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StudentAttendanceInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StudentAttendanceInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (AttendanceStatus != other.AttendanceStatus) return false;
+      if (LectureName != other.LectureName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (AttendanceStatus.Length != 0) hash ^= AttendanceStatus.GetHashCode();
+      if (LectureName.Length != 0) hash ^= LectureName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (AttendanceStatus.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AttendanceStatus);
+      }
+      if (LectureName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LectureName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (AttendanceStatus.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AttendanceStatus);
+      }
+      if (LectureName.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(LectureName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (AttendanceStatus.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AttendanceStatus);
+      }
+      if (LectureName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LectureName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StudentAttendanceInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.AttendanceStatus.Length != 0) {
+        AttendanceStatus = other.AttendanceStatus;
+      }
+      if (other.LectureName.Length != 0) {
+        LectureName = other.LectureName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            AttendanceStatus = input.ReadString();
+            break;
+          }
+          case 26: {
+            LectureName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            AttendanceStatus = input.ReadString();
+            break;
+          }
+          case 26: {
+            LectureName = input.ReadString();
             break;
           }
         }

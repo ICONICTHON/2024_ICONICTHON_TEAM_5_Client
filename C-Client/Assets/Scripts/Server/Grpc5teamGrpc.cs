@@ -57,6 +57,10 @@ namespace IconicThon.Network {
     static readonly grpc::Marshaller<global::IconicThon.Network.RequestAttendanceInfo> __Marshaller_IconicThon_Network_RequestAttendanceInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::IconicThon.Network.RequestAttendanceInfo.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::IconicThon.Network.ResponseAttendanceInfo> __Marshaller_IconicThon_Network_ResponseAttendanceInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::IconicThon.Network.ResponseAttendanceInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::IconicThon.Network.StudentInfo> __Marshaller_IconicThon_Network_StudentInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::IconicThon.Network.StudentInfo.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::IconicThon.Network.StudentAttendanceInfo> __Marshaller_IconicThon_Network_StudentAttendanceInfo = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::IconicThon.Network.StudentAttendanceInfo.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::IconicThon.Network.LectureInfo, global::IconicThon.Network.PrivateKey> __Method_RefreshPrivateKey = new grpc::Method<global::IconicThon.Network.LectureInfo, global::IconicThon.Network.PrivateKey>(
@@ -82,6 +86,14 @@ namespace IconicThon.Network {
         __Marshaller_IconicThon_Network_RequestAttendanceInfo,
         __Marshaller_IconicThon_Network_ResponseAttendanceInfo);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::IconicThon.Network.StudentInfo, global::IconicThon.Network.StudentAttendanceInfo> __Method_RequestLectureInfo = new grpc::Method<global::IconicThon.Network.StudentInfo, global::IconicThon.Network.StudentAttendanceInfo>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestLectureInfo",
+        __Marshaller_IconicThon_Network_StudentInfo,
+        __Marshaller_IconicThon_Network_StudentAttendanceInfo);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -106,6 +118,12 @@ namespace IconicThon.Network {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::IconicThon.Network.ResponseAttendanceInfo> SendAttendanceInfo(global::IconicThon.Network.RequestAttendanceInfo request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::IconicThon.Network.StudentAttendanceInfo> RequestLectureInfo(global::IconicThon.Network.StudentInfo request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -199,6 +217,26 @@ namespace IconicThon.Network {
       {
         return CallInvoker.AsyncUnaryCall(__Method_SendAttendanceInfo, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::IconicThon.Network.StudentAttendanceInfo RequestLectureInfo(global::IconicThon.Network.StudentInfo request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestLectureInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::IconicThon.Network.StudentAttendanceInfo RequestLectureInfo(global::IconicThon.Network.StudentInfo request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestLectureInfo, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::IconicThon.Network.StudentAttendanceInfo> RequestLectureInfoAsync(global::IconicThon.Network.StudentInfo request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestLectureInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::IconicThon.Network.StudentAttendanceInfo> RequestLectureInfoAsync(global::IconicThon.Network.StudentInfo request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestLectureInfo, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AttendanceClient NewInstance(ClientBaseConfiguration configuration)
@@ -215,7 +253,8 @@ namespace IconicThon.Network {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RefreshPrivateKey, serviceImpl.RefreshPrivateKey)
           .AddMethod(__Method_RequestLectureList, serviceImpl.RequestLectureList)
-          .AddMethod(__Method_SendAttendanceInfo, serviceImpl.SendAttendanceInfo).Build();
+          .AddMethod(__Method_SendAttendanceInfo, serviceImpl.SendAttendanceInfo)
+          .AddMethod(__Method_RequestLectureInfo, serviceImpl.RequestLectureInfo).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -228,6 +267,7 @@ namespace IconicThon.Network {
       serviceBinder.AddMethod(__Method_RefreshPrivateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::IconicThon.Network.LectureInfo, global::IconicThon.Network.PrivateKey>(serviceImpl.RefreshPrivateKey));
       serviceBinder.AddMethod(__Method_RequestLectureList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::IconicThon.Network.JsonRequest, global::IconicThon.Network.JsonResponse>(serviceImpl.RequestLectureList));
       serviceBinder.AddMethod(__Method_SendAttendanceInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::IconicThon.Network.RequestAttendanceInfo, global::IconicThon.Network.ResponseAttendanceInfo>(serviceImpl.SendAttendanceInfo));
+      serviceBinder.AddMethod(__Method_RequestLectureInfo, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::IconicThon.Network.StudentInfo, global::IconicThon.Network.StudentAttendanceInfo>(serviceImpl.RequestLectureInfo));
     }
 
   }

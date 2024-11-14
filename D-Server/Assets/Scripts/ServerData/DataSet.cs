@@ -58,6 +58,19 @@ public class DataSet : MonoBehaviour
                 currentIndex++;
             }
         }
+
+        for (int tmpCount = 0; tmpCount < 6; ++tmpCount)
+        {
+            int capacity = Random.Range(40, 70); // 강의실의 총량 설정 강의실의 총량은 40 ~ 69까지 랜덤한 값을 가짐
+            TempLectureList.Add(new JsonFileDataFrame());
+            TempLectureList[currentIndex].LectureBuilding = 0;
+            TempLectureList[currentIndex].LectureCapacity = capacity;
+            TempLectureList[currentIndex].LectureNumber = Random.Range(1000, 2000);
+            TempLectureList[currentIndex].LectureStudent = Random.Range(30, capacity);
+            TempLectureList[currentIndex].LectureTemperature = Random.Range(15, 31);
+            TempLectureList[currentIndex].LectureHumidity = Random.Range(40, 51);
+            currentIndex++;
+        }
         json = JsonUtilityExtention.ToJson(TempLectureList);
         Debug.Log(json);
     }

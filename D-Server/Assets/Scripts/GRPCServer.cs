@@ -24,6 +24,8 @@ public class GRPCServer : MonoBehaviour
         };
         server.Start();
         Debug.Log("Server Operation");
+
+        TempStudentInfo.Init();
     }
 
 
@@ -50,29 +52,85 @@ public class AttendanceGRPC : Attendance.AttendanceBase
 
         return Task.FromResult(new JsonResponse { Json = json });
     }
-}
 
-public class RandomPrivateKeyCreator
-{
-    public static string GetRandomKey(string lectureCode, string attendStatus)
+    public override Task<ResponseAttendanceInfo> SendAttendanceInfo(RequestAttendanceInfo attendanceInfo, ServerCallContext context)
     {
-        DateTime nowDateTime = DateTime.Now;
-        string dateTimeStr = nowDateTime.ToString();
+        string studentId = attendanceInfo.Id;
+        string lectureCode = attendanceInfo.LectureCode;
+        string privateKey = attendanceInfo.PrivateKey;
+        Debug.Log(studentId);
+        Debug.Log(lectureCode);
+        Debug.Log(privateKey);
 
-        string ret = dateTimeStr + lectureCode + attendStatus;
+        string attendanceStatus = "ERROR";
 
-        SHA1 sha = SHA1.Create();
-        byte[] hashData = sha.ComputeHash(Encoding.Default.GetBytes(ret));
-        StringBuilder returnValue = new StringBuilder();
-
-        for (int i = 0; i < hashData.Length; ++i)
+        if (TempStudentInfo.ExistStudentAttendInfo(lectureCode, studentId) == false)
         {
-            returnValue.Append(hashData[i].ToString());
+            attendanceStatus = TempStudentInfo.GetLecturesAttendanceInfo(lectureCode, privateKey);
         }
 
-        DebugTool.myLog += "created key = " + returnValue.ToString() + "\n";
-        Debug.Log("created key = " + returnValue.ToString());
+        if (attendanceStatus != "ERROR")
+        {
+            TempStudentInfo.UpdateStudentAttendInfo(lectureCode, studentId, attendanceStatus);
+        }
 
-        return returnValue.ToString();
+        string lectureName = "";
+
+        if (lectureCode == "ABC-1234")
+        {
+            lectureName = "인공지능과 미래사회";
+        }
+        else if (lectureCode == "ABC-5678")
+        {
+            lectureName = "심화 프로그래밍";
+        }
+        else if (lectureCode == "ABC-9012")
+        {
+            lectureName = "프로그래밍언어론";
+        }
+
+        return Task.FromResult(new ResponseAttendanceInfo { AttendanceStatus = attendanceStatus, LectureName = lectureName }); // TempName
+    }
+
+    public override Task<StudentAttendanceInfo> RequestLectureInfo(StudentInfo studentInfo, ServerCallContext context)
+    {
+        string lectureCode = studentInfo.LectureCode;
+        string studentId = studentInfo.Id;
+
+        string attendStatus = "READY";
+
+        Debug.Log(lectureCode);
+        Debug.Log(studentId);
+
+        Debug.Log("Log1");
+        if (TempStudentInfo.ExistStudentAttendInfo(lectureCode, studentId))
+        {
+            Debug.Log("Log2");
+            string status = TempStudentInfo.GetStudentAttendStatus(lectureCode, studentId);
+
+            attendStatus = status;
+        }
+        else
+        {
+
+        }
+        Debug.Log(attendStatus);
+
+        string lectureName = "";
+
+        if (lectureCode == "ABC-1234")
+        {
+            lectureName = "인공지능과 미래사회";
+        }
+        else if (lectureCode == "ABC-5678")
+        {
+            lectureName = "심화 프로그래밍";
+        }
+        else if (lectureCode == "ABC-9012")
+        {
+            lectureName = "프로그래밍언어론";
+        }
+
+        return Task.FromResult(new StudentAttendanceInfo { AttendanceStatus = attendStatus, Id = studentId, LectureName = lectureName });
     }
 }
