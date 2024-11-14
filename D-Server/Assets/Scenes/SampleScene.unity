@@ -236,8 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf193e9eb28caa4cbaf96abe56e1bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _randomBatch: 10
-  _maxBuilding: 3
+  RandomBatch: 10
+  MaxBuilding: 3
+  json: 
 --- !u!4 &1758929429
 Transform:
   m_ObjectHideFlags: 0

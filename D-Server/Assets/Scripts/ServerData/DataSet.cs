@@ -26,6 +26,7 @@ public class DataSet : MonoBehaviour
 {
     public int RandomBatch;
     public int MaxBuilding;
+    public string json;
 
     static List<JsonFileDataFrame> TempLectureList = new List<JsonFileDataFrame>(); 
 
@@ -52,8 +53,12 @@ public class DataSet : MonoBehaviour
                 TempLectureList[currentIndex].LectureCapacity = capacity;
                 TempLectureList[currentIndex].LectureNumber = Random.Range(1000, 9999);
                 TempLectureList[currentIndex].LectureStudent = Random.Range(0, capacity);
+                TempLectureList[currentIndex].LectureTemperature = Random.Range(15, 31);
+                TempLectureList[currentIndex].LectureHumidity = Random.Range(40, 51);
                 currentIndex++;
             }
         }
+        json = JsonUtilityExtention.ToJson(TempLectureList);
+        Debug.Log(json);
     }
 }

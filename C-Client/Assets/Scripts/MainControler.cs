@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LectureDefinition;
+using UnityEngine.UI;
 
 public class MainControler : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class MainControler : MonoBehaviour
     private EBuildingField _currentSelectBuilding = EBuildingField.Engineering;
     private float _timer = 0;
     private float _resetTime = 3f;
+    [SerializeField] Sprite[] LectureControlImage;
+    [SerializeField] Sprite[] LectureIsAir;
 
     // 테스트 데이터
     private List<JsonFileDataFrame> _JsonData = new List<JsonFileDataFrame>();
@@ -65,19 +68,24 @@ public class MainControler : MonoBehaviour
         List<GameObject> FindInfoObejct(GameObject parentLectureObject)
         {
             List<GameObject> lectureInfoChilds = new List<GameObject>();
-            foreach(Transform child in parentLectureObject.transform)
-            {
-                lectureInfoChilds.Add(child.GetChild(0).gameObject);
-            }
+            lectureInfoChilds.Add(parentLectureObject.transform.GetChild(0).transform.GetChild(0).gameObject);
+            lectureInfoChilds.Add(parentLectureObject.transform.GetChild(0).transform.GetChild(1).gameObject);
+            lectureInfoChilds.Add(parentLectureObject.transform.GetChild(1).transform.GetChild(0).transform.GetChild(1).gameObject);
+            lectureInfoChilds.Add(parentLectureObject.transform.GetChild(1).transform.GetChild(1).transform.GetChild(1).gameObject);
+            lectureInfoChilds.Add(parentLectureObject.transform.GetChild(1).transform.GetChild(2).transform.GetChild(1).gameObject);
+            lectureInfoChilds.Add(parentLectureObject.transform.GetChild(2).transform.GetChild(0).gameObject);
             return lectureInfoChilds;
         }
 
         foreach(BaseLectureInfo baseLectureInfo in baseLectureInfos)
         {
             // LectureDic안에 들어있는 baseLectureInfo 리스트 호출
-            GameObject infoSpawned = Instantiate(LectureRoomPrefab, LectureRoomInfoPanel.transform);
-            baseLectureInfo.SetInfoObject(FindInfoObejct(infoSpawned));
-            infoSpawned.name = baseLectureInfo.LectureFloor + "F-" + baseLectureInfo.LectureNumber;
+            if(baseLectureInfo.LectureFloor == 1)
+            {
+                GameObject infoSpawned = Instantiate(LectureRoomPrefab, LectureRoomInfoPanel.transform);
+                baseLectureInfo.SetInfoObject(FindInfoObejct(infoSpawned), LectureControlImage, LectureIsAir);
+                infoSpawned.name = baseLectureInfo.LectureFloor + "F-" + baseLectureInfo.LectureNumber;
+            }
         }
     }
 
@@ -86,8 +94,10 @@ public class MainControler : MonoBehaviour
         BaseLectureInfo baseLectureInfo = new BaseLectureInfo(this);
 
         baseLectureInfo.LectureNumber = jsonData.LectureNumber;
-        baseLectureInfo.LectureCapacity = jsonData.LectureNumber;
-        baseLectureInfo.LectureStudent = jsonData.LectureNumber;
+        baseLectureInfo.LectureCapacity = jsonData.LectureCapacity;
+        baseLectureInfo.LectureStudent = jsonData.LectureStudent;
+        baseLectureInfo.LectureHumidity = jsonData.LectureHumidity;
+        baseLectureInfo.LectureTemperature = jsonData.LectureTemperature;
         baseLectureInfo.LectureFloor = baseLectureInfo.LectureNumber / 1000; // 층 구별
 
         EBuildingField dataBuildingField = (EBuildingField)jsonData.LectureBuilding;
