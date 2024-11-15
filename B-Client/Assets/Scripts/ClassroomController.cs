@@ -33,15 +33,26 @@ public class ClassroomController : MonoBehaviour
         focusLecture = null;
 
         // 임시 강의, 대관 생성
-
         {
-            LectureTime tempLectureTime = new LectureTime(12, 0, 90);
+            DateTime nowDate = DateTime.Now.AddMinutes(16);
+            int tempHour = nowDate.Hour;
+            int tempMinute = nowDate.Minute;
+
+            LectureTime tempLectureTime = new LectureTime(tempHour, tempMinute, 90);
             List<LectureTime> lectureTimes = new List<LectureTime>();
             lectureTimes.Add(tempLectureTime);
             Lecture tempLecture = new Lecture("ABC-1234", lectureTimes, "인공지능과 미래사회", "장현진", 30);
 
             lectureList.Add(tempLecture);
         }
+        //{
+        //    LectureTime tempLectureTime = new LectureTime(12, 0, 90);
+        //    List<LectureTime> lectureTimes = new List<LectureTime>();
+        //    lectureTimes.Add(tempLectureTime);
+        //    Lecture tempLecture = new Lecture("ABC-1234", lectureTimes, "인공지능과 미래사회", "장현진", 30);
+
+        //    lectureList.Add(tempLecture);
+        //}
         {
             LectureTime tempLectureTime = new LectureTime(14, 30, 120);
             List<LectureTime> lectureTimes = new List<LectureTime>();
@@ -65,7 +76,7 @@ public class ClassroomController : MonoBehaviour
     private void Update()
     {
         nowDateTime = DateTime.Now;
-        nowDateTime = new DateTime(2024, 11, 15, 10, 55,0); //
+        // nowDateTime = new DateTime(2024, 11, 15, 17, 08,0); //
         Debug.Log(nowDateTime);
         qrCodeController.SetNowDateTimeText(nowDateTime);
 

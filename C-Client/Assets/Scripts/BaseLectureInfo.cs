@@ -118,15 +118,15 @@ public class BaseLectureInfo
         {
             _lectureControlImage = value;
             
-            if ((float)LectureStudent / (float)LectureCapacity > 0.5f)
-            {
-                CanLectureControl = false;
-                _lectureControlImage.sprite = _lectureControlImages[1];
-            }
-            else
+            if ((float)LectureStudent / (float)LectureCapacity > 0.4f)
             {
                 CanLectureControl = true;
                 _lectureControlImage.sprite = _lectureControlImages[0];
+            }
+            else
+            {
+                CanLectureControl = false;
+                _lectureControlImage.sprite = _lectureControlImages[1];
             }
         }
     }

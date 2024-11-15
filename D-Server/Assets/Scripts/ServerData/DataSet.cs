@@ -66,7 +66,7 @@ public class DataSet : MonoBehaviour
             TempLectureList[currentIndex].LectureBuilding = 0;
             TempLectureList[currentIndex].LectureCapacity = capacity;
             TempLectureList[currentIndex].LectureNumber = Random.Range(1000, 2000);
-            TempLectureList[currentIndex].LectureStudent = Random.Range(30, capacity);
+            TempLectureList[currentIndex].LectureStudent = Random.Range(10, capacity);
             TempLectureList[currentIndex].LectureTemperature = Random.Range(15, 31);
             TempLectureList[currentIndex].LectureHumidity = Random.Range(40, 51);
             currentIndex++;
