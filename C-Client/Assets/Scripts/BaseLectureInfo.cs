@@ -96,13 +96,20 @@ public class BaseLectureInfo
         set
         {
             _lectureAirConditionerImage = value;
-            if (CanLectureControl && Random.Range(0,2) == 1)
+            if (CanLectureControl)
             {
-                _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[1];
+                if(Random.Range(0, 2) == 0)
+                {
+                    _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[1];
+                }
+                else
+                {
+                    _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[0];
+                }
             }
             else
             {
-                _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[0];
+                _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[2];
             }
         }
     }
