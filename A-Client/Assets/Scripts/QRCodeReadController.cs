@@ -157,7 +157,7 @@ public class QRCodeReadController : MonoBehaviour
         qrCodeReadStr = result.Text;
         uiController.SetQRData(qrCodeReadStr);
 
-        string attendance = grpcClient.SendAttendanceInfo("2019112549", qrCodeReadStr, lectureCode);
+        string attendance = grpcClient.SendAttendanceInfo("201911254911", qrCodeReadStr, lectureCode);
         if(attendance != "")
         {
             webCamTexture.Stop();
