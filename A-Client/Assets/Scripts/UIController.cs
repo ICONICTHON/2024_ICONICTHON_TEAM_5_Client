@@ -63,7 +63,7 @@ public class UIController : MonoBehaviour
 
     public void ShowAttendancePopup(string attendance)
     {
-        if(attendance == "SUCCESS")
+        if(attendance == "SUCCESS" || attendance == "LATE")
         {
             attendanceStatusSuccessObject.SetActive(true);
             attendanceStatusFailObject.SetActive(false);
@@ -92,6 +92,12 @@ public class UIController : MonoBehaviour
         }
     }
 
+    public void OnClickBackBtn()
+    {
+        mainPanel.SetActive(true);
+        classroomPanel.SetActive(false);
+    }
+
     void OnClickLecture(string lectureCode)
     {
         qrCodeReadController.SetLectureCode(lectureCode);
@@ -111,7 +117,7 @@ public class UIController : MonoBehaviour
         try
         {
             attendanceInfo =
-                grpcClient.RefreshLectureInfo("2019112549", lectureCode);
+                grpcClient.RefreshLectureInfo("201911254911", lectureCode);
 
             DebugTool.myLog += "\n" + attendanceInfo.AttendanceStatus;
 

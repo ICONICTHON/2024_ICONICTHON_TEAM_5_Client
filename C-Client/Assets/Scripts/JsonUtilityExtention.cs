@@ -27,7 +27,7 @@ public static class JsonUtilityExtention
         json = PrettyPrintJson(json);
         if (!path.StartsWith('/')) path = "/" + path;
         File.WriteAllText(Application.dataPath + path, json);
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
     }
 
     public static string ToJson<T>(List<T> datas)
@@ -38,7 +38,7 @@ public static class JsonUtilityExtention
         json = PrettyPrintJson(json);
         
 
-        AssetDatabase.Refresh();
+        //AssetDatabase.Refresh();
 
         return json;
     }

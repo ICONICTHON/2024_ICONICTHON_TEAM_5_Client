@@ -6,8 +6,8 @@ using IconicThon.Network;
 
 public class GrpcClient : MonoBehaviour
 {
-    //const string ip = "59.6.87.115" + ":";
-    const string ip = "localhost" + ":";
+    const string ip = "59.6.87.115" + ":";
+    //const string ip = "localhost" + ":";
     const int port = 7777;
 
     static Channel channel;

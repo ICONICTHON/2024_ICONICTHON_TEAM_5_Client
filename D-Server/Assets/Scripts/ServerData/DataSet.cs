@@ -28,13 +28,26 @@ public class DataSet : MonoBehaviour
     public int MaxBuilding;
     public string json;
 
-    static List<JsonFileDataFrame> TempLectureList = new List<JsonFileDataFrame>(); 
+    static List<JsonFileDataFrame> TempLectureList = new List<JsonFileDataFrame>();
+    private Dictionary<string, string> _testAttendanceDic = new Dictionary<string, string>();
+    private int _checkIndex;
 
     void Start()
     {
         CreateRandomDataFrame();
+        _testAttendanceDic = TempStudentInfo.dicLectureAttendStudentIds["ABC-1234"];
+        _checkIndex = _testAttendanceDic.Count;
+        TempLectureList[0].LectureStudent = _checkIndex;
     }
 
+    private void Update()
+    {
+        if(_checkIndex < TempStudentInfo.dicLectureAttendStudentIds["ABC-1234"].Count)
+        {
+            _checkIndex = TempStudentInfo.dicLectureAttendStudentIds["ABC-1234"].Count;
+            TempLectureList[0].LectureStudent = _checkIndex;
+        }
+    }
     public static List<JsonFileDataFrame> GetData()
     {
         return TempLectureList;
@@ -43,7 +56,17 @@ public class DataSet : MonoBehaviour
     private void CreateRandomDataFrame()
     {
         int currentIndex = 0;
-        for(int buildingCount = 0; buildingCount < MaxBuilding; ++buildingCount)
+
+        TempLectureList.Add(new JsonFileDataFrame());
+        TempLectureList[currentIndex].LectureBuilding = 0;
+        TempLectureList[currentIndex].LectureCapacity = 6;
+        TempLectureList[currentIndex].LectureNumber = 1004;
+        TempLectureList[currentIndex].LectureStudent = 0;
+        TempLectureList[currentIndex].LectureTemperature = Random.Range(15, 31);
+        TempLectureList[currentIndex].LectureHumidity = Random.Range(40, 51);
+        currentIndex++;
+
+        for (int buildingCount = 0; buildingCount < MaxBuilding; ++buildingCount)
         {
             for (int updateCount = 0; updateCount < RandomBatch; ++updateCount)
             {
@@ -66,11 +89,12 @@ public class DataSet : MonoBehaviour
             TempLectureList[currentIndex].LectureBuilding = 0;
             TempLectureList[currentIndex].LectureCapacity = capacity;
             TempLectureList[currentIndex].LectureNumber = Random.Range(1000, 2000);
-            TempLectureList[currentIndex].LectureStudent = Random.Range(30, capacity);
+            TempLectureList[currentIndex].LectureStudent = Random.Range(10, capacity);
             TempLectureList[currentIndex].LectureTemperature = Random.Range(15, 31);
             TempLectureList[currentIndex].LectureHumidity = Random.Range(40, 51);
             currentIndex++;
         }
+
         json = JsonUtilityExtention.ToJson(TempLectureList);
         Debug.Log(json);
     }

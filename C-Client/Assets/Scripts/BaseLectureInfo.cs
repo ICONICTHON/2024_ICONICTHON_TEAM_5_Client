@@ -96,13 +96,20 @@ public class BaseLectureInfo
         set
         {
             _lectureAirConditionerImage = value;
-            if (CanLectureControl && Random.Range(0,2) == 1)
+            if (CanLectureControl)
             {
-                _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[1];
+                if(Random.Range(0, 2) == 0)
+                {
+                    _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[1];
+                }
+                else
+                {
+                    _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[0];
+                }
             }
             else
             {
-                _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[0];
+                _lectureAirConditionerImage.sprite = _lectureAirConditionerImages[2];
             }
         }
     }
@@ -118,15 +125,15 @@ public class BaseLectureInfo
         {
             _lectureControlImage = value;
             
-            if ((float)LectureStudent / (float)LectureCapacity > 0.5f)
-            {
-                CanLectureControl = false;
-                _lectureControlImage.sprite = _lectureControlImages[1];
-            }
-            else
+            if ((float)LectureStudent / (float)LectureCapacity > 0.4f)
             {
                 CanLectureControl = true;
                 _lectureControlImage.sprite = _lectureControlImages[0];
+            }
+            else
+            {
+                CanLectureControl = false;
+                _lectureControlImage.sprite = _lectureControlImages[1];
             }
         }
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TempStudentInfo
 {
-    static Dictionary<string, Dictionary<string, string>> dicLectureAttendStudentIds;
+    public static Dictionary<string, Dictionary<string, string>> dicLectureAttendStudentIds;
 
     public static void Init()
     {
